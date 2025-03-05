@@ -1,0 +1,220 @@
+.page { 
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif; 
+    margin: 0 auto; 
+    min-height: 100vh; /* Chiều cao tối thiểu bằng chiều cao màn hình */
+    font-size: 1.2em;
+    box-sizing: border-box;
+}
+
+.page__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(179, 105, 140); 
+    background-image: url(image/hd6img.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 10px 5px;
+    border-bottom:10px solid white ;
+}
+.header__nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Cho phép xuống dòng khi thiếu chỗ */
+    max-width: 100%; /* Ngăn tràn ra ngoài */
+    padding: 10px;
+    gap: 15px;
+    border: 1px solid rgb(2, 62, 105);
+}
+
+.nav__link {
+    text-decoration: none;
+    color: rgb(255, 255, 255); 
+    padding: 0 10px 0 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 3px 0 #00000066, 0 0 2px 0 #0000004d;
+    background-color: #016898; 
+}
+
+.nav__link:hover {
+    background-color: white;
+    color:#016898;
+}
+
+/* Giữ phần nội dung luôn chiếm khoảng trống, đẩy footer xuống */
+.page__main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background-image: url(image/hd5img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-bottom: 10px solid white;
+}
+
+.main__article {  
+    max-width: 550px; 
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 8px 0 0 8px  rgb(206, 134, 159);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 450px;
+    background-color: rgba(225, 147, 174, 0.777);
+    /* Bắt đầu ẩn và dịch chuyển xuống */
+    opacity: 0;
+    transform: translateY(100px);
+    /* Áp dụng animation */
+    animation: animated-form 1s ease-out forwards;
+}
+@keyframes animated-form{
+    from{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.article__label { 
+    font-weight: bold; 
+    display: block; 
+    margin-top: 10px; 
+}
+
+.article__input, .article__textarea { 
+    width: 95%; 
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc; 
+    border-radius: 8px;
+}
+
+.article__input:hover,
+.article__textarea:hover {
+    background-color: rgb(218, 213, 213);
+}
+
+.article__button { 
+    width: 100px;
+    margin-top: 15px; 
+    margin-bottom: 15px;
+    padding: 10px; 
+    background: rgb(240, 52, 115); 
+    color: white; 
+    border: none; 
+    border-radius: 8px; 
+    cursor: pointer; 
+}
+
+.article__button:hover {
+    background: rgb(215, 5, 75); 
+}
+
+.article__message { 
+    position: absolute;
+    bottom: 10px; /* Đặt vị trí thông báo */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    margin-top: 5px;
+    color: green;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: rgb(117, 229, 134);
+    display: none; /* Ẩn mặc định */
+}
+
+.article__title {
+    text-align: center;
+}
+.header__link{
+    margin-top: -20px;
+    display: flex;
+    align-items: center;
+    max-width: 120px; /* Giới hạn kích thước logo */
+    overflow: hidden; /* Ngăn tràn ra ngoài */
+}
+.link__image-logo {
+    width: 80px;
+}
+
+.header__image-animation1{
+    height: 100px;
+    position: absolute;
+    top:-15px;
+    animation: animated-image1 1.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes animated-image1{
+    from{
+        left: 80%;
+    }
+    to{
+        left: 30%;
+    }
+}
+
+.header__image-animation2{
+    height: 70px;
+    position: absolute;
+    top:-5px;
+    animation: animated-image2 1.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes animated-image2{
+    from{
+        left: 80%;
+    }
+    to{
+        left: 45%;
+    }
+}
+
+.header__image-animation3{
+    height: 70px;
+    position: absolute;
+    top: 0px;
+    animation: animated-image3 1.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes animated-image3{
+    from{
+        left: 80%;
+    }
+    to{
+        left: 63%;
+    }
+}
+
+#email-error {
+    font-size: 15px;
+    margin-top: 5px;
+    margin-left: 5px;
+    color: rgb(255, 0, 0);
+}
+
+/* Footer */
+.page__footer {
+    background-color: rgb(42, 40, 40);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    min-height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
