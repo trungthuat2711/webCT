@@ -12,13 +12,13 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: rgb(179, 105, 140); 
-    background-image: url(image/hd6img.jpg);
+    padding: 10px 5px;
+    border-bottom:10px solid white ;
+    align-items: center;
+    background-image: url(image/hd2img.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 10px 5px;
-    border-bottom:10px solid white ;
 }
 .header__nav {
     display: flex;
@@ -26,18 +26,19 @@
     align-items: center;
     flex-wrap: wrap; /* Cho phép xuống dòng khi thiếu chỗ */
     max-width: 100%; /* Ngăn tràn ra ngoài */
-    padding: 10px;
-    gap: 15px;
-    border: 1px solid rgba(36, 125, 152, 0.247);
+    padding: 15px;
+    margin-top: 15px;
+    margin-bottom: -10px;
+    gap: 30px;
 }
 
 .nav__link {
     text-decoration: none;
     color: rgb(255, 255, 255); 
-    padding: 0 10px 0 10px;
+    padding: 10px;
     border-radius: 5px;
     box-shadow: 0 0 3px 0 #00000066, 0 0 2px 0 #0000004d;
-    background-color: #016898; 
+    background-color: #0c7db1; 
 }
 
 .nav__link:hover {
@@ -52,11 +53,11 @@
     justify-content: center;
     align-items: center;
     padding: 30px;
-    background-image: url(image/hd5img.jpg);
+    border-bottom:15px solid white ;
+    background-image: url(image/hd1img.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
     background-position: center;
-    border-bottom: 10px solid white;
+    background-size: cover;
 }
 
 .main__article {  
@@ -141,26 +142,27 @@
     text-align: center;
 }
 .header__link{
-    margin-top: -20px;
+    margin-top: -10px;
     display: flex;
     align-items: center;
+    justify-content: center;
     max-width: 120px; /* Giới hạn kích thước logo */
     overflow: hidden; /* Ngăn tràn ra ngoài */
 }
 .link__image-logo {
-    width: 80px;
+    width: 100px;
 }
 
 .header__image-animation1{
-    height: 100px;
+    height: 180px;
     position: absolute;
-    top:-15px;
+    top:-30px;
     animation: animated-image1 1.5s;
     animation-fill-mode: forwards;
 }
 @keyframes animated-image1{
     from{
-        left: 80%;
+        left: 90%;
     }
     to{
         left: 20%;
@@ -168,37 +170,41 @@
 }
 
 .header__image-animation2{
-    height: 70px;
+    height: 200px;
     position: absolute;
-    top:-5px;
+    top: -10px;
     animation: animated-image2 1.5s;
     animation-fill-mode: forwards;
 }
 @keyframes animated-image2{
     from{
-        left: 80%;
+        left: 90%;
     }
     to{
-        left: 45%;
+        left: -3%;
     }
 }
 
 .header__image-animation3{
-    height: 70px;
+    height: 130px;
     position: absolute;
-    top: 0px;
+    top: 2px;
     animation: animated-image3 1.5s;
     animation-fill-mode: forwards;
 }
 @keyframes animated-image3{
     from{
-        left: 85%;
+        left: 90%;
     }
     to{
-        left: 75%;
+        left: 80%;
     }
 }
-
+.header__image-animation1,
+.header__image-animation2,
+.header__image-animation3 {
+    pointer-events: none; /* Vô hiệu hóa tất cả sự kiện chuột */
+}
 #email-error {
     font-size: 15px;
     margin-top: 5px;
