@@ -28,7 +28,7 @@
     max-width: 100%; /* Ngăn tràn ra ngoài */
     padding: 10px;
     gap: 15px;
-    border: 1px solid rgb(2, 62, 105);
+    border: 1px solid rgba(36, 125, 152, 0.247);
 }
 
 .nav__link {
@@ -163,7 +163,7 @@
         left: 80%;
     }
     to{
-        left: 30%;
+        left: 20%;
     }
 }
 
@@ -192,10 +192,10 @@
 }
 @keyframes animated-image3{
     from{
-        left: 80%;
+        left: 85%;
     }
     to{
-        left: 63%;
+        left: 75%;
     }
 }
 
@@ -211,7 +211,6 @@
     background-color: rgb(42, 40, 40);
     color: white;
     text-align: center;
-    padding: 20px;
     min-height: 100px;
     width: 100%;
     display: flex;
