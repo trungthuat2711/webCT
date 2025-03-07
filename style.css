@@ -56,12 +56,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 30px;
+    padding: 35px;
     border-bottom:15px solid white ;
-    background-image: url(image/hd1img.jpg);
+    background-image: url(image/hd1img.jpg); 
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
+    /* -webkit-background-size:cover;
+    -moz-background-size:cover;
+    background-size: cover; */
 }
 
 .main__article {  
