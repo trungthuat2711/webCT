@@ -52,6 +52,8 @@
 
 /* Giữ phần nội dung luôn chiếm khoảng trống, đẩy footer xuống */
 .page__main {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #5a514c;
     flex-grow: 1;
     display: flex;
     justify-content: center;
@@ -77,7 +79,7 @@
     flex-direction: column;
     position: relative;
     min-height: 450px;
-    background-color: rgba(225, 147, 174, 0.829);
+    background-color: rgb(192, 139, 158);
     /* Bắt đầu ẩn và dịch chuyển xuống */
     opacity: 0;
     transform: translateY(100px);
